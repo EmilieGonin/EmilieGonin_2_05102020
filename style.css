@@ -1,8 +1,4 @@
-/* Couleurs
-Bleu : #0065FC
-Bleu clair : #DEEBFF
-Gris : #F2F2F2
-*/
+/***** Couleurs : #0065FC (bleu), #DEEBFF (bleu clair), #F2F2F2 (gris) *****/
 
 body{
   font-family: 'Raleway', sans-serif;
@@ -12,6 +8,8 @@ header, section{
   margin-left: 16.665%;
   margin-right: 16.665%;
 }
+
+/***** HEADER *****/
 header{
   display: flex;
   height: 120px;
@@ -24,6 +22,7 @@ header{
 nav ul{
   list-style-type: none;
   margin: 0;
+  padding: 0;
   display: flex;
 }
 nav li{
@@ -44,4 +43,48 @@ nav li:hover{
 #signin{
   font-weight: 800;
   color: #0065FC;
+}
+
+/***** RESPONSIVE *****/
+@media screen and (max-width: 768px) { /* Tablettes et mobiles */
+  body{
+    position: relative;
+  }
+  header, section{
+    margin-left: 0;
+    margin-right: 0;
+  }
+  /***** HEADER *****/
+  header{
+    flex-wrap: wrap;
+  }
+  #logo, #signin{
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 20px;
+    padding-bottom: 10px;
+  }
+  nav{
+    width: 100%;
+  }
+  nav li{
+    line-height: 50px;
+    border-top: 0;
+  }
+  nav li:not(#signin){
+    border-bottom: 3px #F2F2F2 solid;
+    width: 100%;
+  }
+  .selected, nav li:hover:not(#signin){
+    border-top: 0;
+    border-bottom: 3px #0065FC solid!important;
+    color: #0065FC;
+    font-weight: 500;
+  }
+  #signin{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 120px;
+  }
 }
