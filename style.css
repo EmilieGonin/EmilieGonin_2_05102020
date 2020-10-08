@@ -1,12 +1,27 @@
 /***** Couleurs : #0065FC (bleu), #DEEBFF (bleu clair), #F2F2F2 (gris) *****/
 
+/***** GENERAL *****/
 body{
-  font-family: 'Raleway', sans-serif;
   margin: 0;
+}
+body, input, button{
+  font-family: 'Raleway', sans-serif;
 }
 header, section{
   margin-left: 16.665%;
   margin-right: 16.665%;
+}
+h2{
+  font-size: 22px;
+}
+h3{
+  font-size: 17px;
+}
+h2, h3{
+  margin-bottom: 0;
+}
+p{
+  margin-top: 5px;
 }
 
 /***** HEADER *****/
@@ -41,7 +56,95 @@ nav li:hover{
   font-weight: 500;
 }
 #signin{
-  font-weight: 800;
+  font-weight: 700;
+  color: #0065FC;
+}
+
+/***** SECTION : FILTERS *****/
+form{
+  display: flex;
+}
+form label{
+  background-color: #F2F2F2;
+  border-radius: 15px 0 0 15px;
+  display: inline-flex;
+  width: 50px;
+  height: 50px;
+  align-items: center;
+  justify-content: center;
+}
+input{
+  height: 50px;
+  width: 230px;
+  box-sizing: border-box;
+  border: 1px #F2F2F2 solid;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+input:focus{
+  outline: none;
+  box-shadow: 0px 0px 10px #F2F2F2;
+}
+button[type="submit"]{
+  width: 135px;
+  border: 0;
+  border-radius: 0 15px 15px 0;
+  background-color: #0065FC;
+  color: white;
+}
+input, button, .filter{
+  font-weight: 700;
+  font-size: 17px;
+}
+label, button, .filter{
+  cursor: pointer;
+}
+#filters h3{
+  display: inline-block;
+  margin-right: 20px;
+  margin-top: 45px;
+  margin-bottom: 45px;
+}
+.filter{
+  height: 50px;
+  box-sizing: border-box;
+  margin-left: 10px;
+  margin-right: 10px;
+  border-radius: 50px;
+  border: 2px #F2F2F2 solid;
+  border-left: none;
+  background-color: white;
+  display: inline-flex;
+  align-items: center;
+  padding-right: 15px;
+}
+.filter p{
+  background-color: #DEEBFF;
+  color: #0065FC;
+  height: 50px;
+  width: 50px;
+  box-sizing: border-box;
+  border-radius: 50px;
+  line-height: 50px;
+  text-align: center;
+  margin: 0;
+  margin-right: 10px;
+}
+.info{
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+}
+.infobubble{
+  height: 20px;
+  width: 20px;
+  box-sizing: border-box;
+  border: 1px #F2F2F2 solid;
+  font-size: 10px;
+  padding: 3px;
+  margin-right: 10px;
+  border-radius: 10px;
+  text-align: center;
   color: #0065FC;
 }
 
