@@ -63,6 +63,7 @@ nav li:hover{
 /***** SECTION : FILTERS *****/
 form{
   display: flex;
+  margin-bottom: 30px;
 }
 form label{
   background-color: #F2F2F2;
@@ -92,6 +93,10 @@ button[type="submit"]{
   background-color: #0065FC;
   color: white;
 }
+#search-mobile{
+  display: none;
+  width: 50px;
+}
 input, button, .filter{
   font-weight: 700;
   font-size: 17px;
@@ -102,7 +107,6 @@ label, button, .filter{
 #filters h3{
   display: inline-block;
   margin-right: 20px;
-  margin-top: 45px;
   margin-bottom: 45px;
 }
 .filter{
@@ -133,7 +137,6 @@ label, button, .filter{
 .info{
   display: flex;
   align-items: center;
-  font-size: 15px;
 }
 .infobubble{
   height: 20px;
@@ -153,9 +156,14 @@ label, button, .filter{
   body{
     position: relative;
   }
-  header, section{
+  header{
     margin-left: 0;
     margin-right: 0;
+    margin-bottom: 40px;
+  }
+  section{
+    margin-left: 20px;
+    margin-right: 20px;
   }
   /***** HEADER *****/
   header{
@@ -189,5 +197,30 @@ label, button, .filter{
     top: 0;
     right: 0;
     width: 120px;
+  }
+  /***** SECTION : FILTERS *****/
+  form{
+    margin-top: 30px;
+    justify-content: center;
+  }
+  #filters h3{
+    display: block;
+    margin-bottom: 15px;
+  }
+  .filter{
+    margin-bottom: 10px;
+  }
+  .info{
+    margin-top: 10px;
+    align-items: flex-start;
+  }
+}
+@media screen and (max-width: 425px) { /* Mobiles */
+  /***** SECTION : FILTERS *****/
+  #search-pc{
+    display: none;
+  }
+  #search-mobile{
+    display: inline-block;
   }
 }
