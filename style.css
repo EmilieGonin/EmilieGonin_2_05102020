@@ -8,8 +8,9 @@ body, input, button{
   font-family: 'Raleway', sans-serif;
 }
 header, section{
-  margin-left: 16.665%;
-  margin-right: 16.665%;
+  width: 75%;
+  margin-left: auto;
+  margin-right: auto;
 }
 h2{
   font-size: 22px;
@@ -17,11 +18,11 @@ h2{
 h3{
   font-size: 17px;
 }
-h2, h3{
-  margin-bottom: 0;
+.blue{
+  color: #0065FC;
 }
-p{
-  margin-top: 5px;
+.grey{
+  color: #F2F2F2;
 }
 
 /***** HEADER *****/
@@ -151,10 +152,135 @@ label, button, .filter{
   color: #0065FC;
 }
 
+/***** SECTION : LODGING *****/
+#lodging{
+  display: flex;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  justify-content: space-between;
+}
+#lodging > div:nth-of-type(1), #lodging > div:nth-of-type(2){
+  border-radius: 20px;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-top: 25px;
+  box-sizing: border-box;
+  background-color: #F2F2F2;
+}
+#lodging > div:nth-of-type(1){
+  width: 67%;
+}
+#lodging > div:nth-of-type(2){
+  width: 30%;
+}
+#lodging > div:nth-of-type(1) > div, #lodging > div:nth-of-type(2) > div{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  align-content: space-between;
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+#lodging > div:nth-of-type(1) > div{
+  height: 430px;
+}
+#lodging > div:nth-of-type(2) > div{
+  height: 490px;
+}
+.lodging-contener, .popular-contener{
+  border: 5px white solid;
+  border-radius: 20px;
+  box-shadow: 0px 0px 5px lightgrey;
+  overflow: hidden;
+  display: flex;
+  box-sizing: border-box;
+}
+.lodging-contener{
+  width: 31%;
+  height: 200px;
+  flex-direction: column;
+}
+.popular-contener{
+  width: 100%;
+  height: 140px;
+}
+.lodging-pic{
+  height: 110px;
+}
+.popular-pic{
+  width: 40%;
+}
+.lodging-contener:nth-child(1) .lodging-pic{
+  background: center/cover url("images/hebergements/4_small/marcus-loke-WQJvWU_HZFo-unsplash.jpg");
+}
+.lodging-contener:nth-child(2) .lodging-pic{
+  background: center/cover url("images/hebergements/4_small/fred-kleber-gTbaxaVLvsg-unsplash.jpg");
+}
+.lodging-contener:nth-child(3) .lodging-pic{
+  background: center/cover url("images/hebergements/4_small/reisetopia-B8WIgxA_PFU-unsplash.jpg");
+}
+.lodging-contener:nth-child(4) .lodging-pic{
+  background: center/cover url("images/hebergements/4_small/annie-spratt-Eg1qcIitAuA-unsplash.jpg");
+}
+.lodging-contener:nth-child(5) .lodging-pic{
+  background: center/cover url("images/hebergements/4_small/nicate-lee-kT-ZyaiwBe0-unsplash.jpg");
+}
+.lodging-contener:nth-child(6) .lodging-pic{
+  background: center/cover url("images/hebergements/4_small/febrian-zakaria-M6S1WvfW68A-unsplash.jpg");
+}
+.popular-contener:nth-child(1) .popular-pic{
+  background: center/cover url("images/hebergements/4_small/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg");
+}
+.popular-contener:nth-child(2) .popular-pic{
+  background: center/cover url("images/hebergements/4_small/aw-creative-VGs8z60yT2c-unsplash.jpg");
+}
+.popular-contener:nth-child(3) .popular-pic{
+  background: center/cover url("images/hebergements/4_small/febrian-zakaria-sjvU0THccQA-unsplash.jpg");
+}
+.lodging-info, .popular-info{
+  background-color: white;
+  padding: 10px;
+  box-sizing: border-box;
+}
+.lodging-info{
+  height: 80px;
+}
+.popular-info{
+  width: 60%;
+}
+.lodging-info h3, .popular-info h3{
+  margin-top: 0;
+  margin-bottom: 6px;
+}
+.lodging-info p, .popular-info p{
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-size: 15px;
+}
+.lodging-info svg, .popular-info svg {
+  font-size: 12px;
+}
+.popular-info svg{
+  margin-top: 30px;
+}
+.fa-chart-line{
+  float: right;
+  cursor: pointer;
+}
+
 /***** RESPONSIVE *****/
+@media screen and (min-width: 768px) { /* PC seulement */
+  #filters h2 + p{
+    margin-top: -15px;
+  }
+}
 @media screen and (max-width: 768px) { /* Tablettes et mobiles */
   body{
     position: relative;
+  }
+  header, section{
+    width: 100%;
   }
   header{
     margin-left: 0;
