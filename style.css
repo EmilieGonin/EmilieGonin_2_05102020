@@ -1,3 +1,47 @@
+/* Couleurs
+Bleu : #0065FC
+Bleu clair : #DEEBFF
+Gris : #F2F2F2
+*/
+
 body{
   font-family: 'Raleway', sans-serif;
+  margin: 0;
+}
+header, section{
+  margin-left: 16.665%;
+  margin-right: 16.665%;
+}
+header{
+  display: flex;
+  height: 120px;
+}
+#logo{
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+nav ul{
+  list-style-type: none;
+  margin: 0;
+  display: flex;
+}
+nav li{
+  line-height: 120px;
+  box-sizing: border-box;
+  border-top: 2px white solid;
+  width: 160px;
+  text-align: center;
+}
+nav li:hover{
+  cursor: pointer;
+}
+.selected, nav li:hover:not(#signin){
+  border-top: 2px #0065FC solid;
+  color: #0065FC;
+  font-weight: 500;
+}
+#signin{
+  font-weight: 800;
+  color: #0065FC;
 }
