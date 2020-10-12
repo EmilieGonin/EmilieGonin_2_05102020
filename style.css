@@ -1,6 +1,9 @@
 /***** Couleurs : #0065FC (bleu), #DEEBFF (bleu clair), #F2F2F2 (gris) *****/
 
 /***** GENERAL *****/
+html{
+  scroll-behavior: smooth;
+}
 body{
   margin: 0;
   width: 100%;
@@ -12,6 +15,7 @@ header, section{
   width: 100%;
   max-width: 1440px;
   margin: auto;
+  box-sizing: border-box;
 }
 h2{
   font-size: 22px;
@@ -173,25 +177,21 @@ label, button, .filter{
   background-color: #F2F2F2;
 }
 #lodging > div:nth-of-type(1){
-  width: 67%;
+  max-width: 880px;
+  margin-right: 20px;
 }
 #lodging > div:nth-of-type(2){
-  width: 30%;
+  max-width: 420px;
+  margin-left: 20px;
 }
 #lodging > div:nth-of-type(1) > div, #lodging > div:nth-of-type(2) > div{
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   align-content: space-between;
   margin-top: 20px;
   margin-bottom: 40px;
-}
-#lodging > div:nth-of-type(1) > div{
-  height: 430px;
-}
-#lodging > div:nth-of-type(2) > div{
-  height: 490px;
 }
 .lodging-contener, .popular-contener{
   border: 5px white solid;
@@ -200,14 +200,18 @@ label, button, .filter{
   overflow: hidden;
   display: flex;
   box-sizing: border-box;
+  margin-bottom: 15px;
+  margin-top: 15px;
 }
 .lodging-contener{
-  width: 31%;
+  width: 245px;
   height: 200px;
   flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
 }
 .popular-contener{
-  width: 100%;
+  width: 340px;
   height: 140px;
 }
 .lodging-pic{
@@ -253,6 +257,8 @@ label, button, .filter{
 }
 .popular-info{
   width: 60%;
+  min-width: 160px;
+  position: relative;
 }
 .lodging-info h3, .popular-info h3{
   margin-top: 0;
@@ -266,8 +272,9 @@ label, button, .filter{
 .lodging-info svg, .popular-info svg {
   font-size: 12px;
 }
-.popular-info svg{
-  margin-top: 30px;
+.stars{
+  position: absolute;
+  bottom: 0;
 }
 .fa-chart-line{
   float: right;
@@ -275,16 +282,35 @@ label, button, .filter{
 }
 
 /***** RESPONSIVE *****/
-@media screen and (min-width: 768px) { /* PC seulement */
+@media screen and (min-width: 769px) { /* PC seulement */
+  header, section {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
   #filters h2 + p{
     margin-top: -15px;
   }
 }
-@media screen and (max-width: 1540px) and (min-width: 769px) { /* Petits PC seulement */
-  header, section {
-    padding-left: 50px;
-    padding-right: 50px;
-    box-sizing: border-box;
+@media screen and (max-width: 1024px) { /* Laptop */
+  /***** SECTION : LODGING *****/
+  .lodging-contener{
+    width: 340px;
+  }
+  #lodging > div:nth-of-type(1){
+    width: 50%;
+  }
+  #lodging > div:nth-of-type(2){
+    width: 50%;
+  }
+  #lodging > div:nth-of-type(1) > div, #lodging > div:nth-of-type(2) > div {
+    justify-content: center;
+    overflow: hidden;
+  }
+  #lodging > div:nth-of-type(1) > div{
+    height: 450px;
+  }
+  #lodging > div:nth-of-type(2) > div{
+    height: 500px;
   }
 }
 @media screen and (max-width: 768px) { /* Tablettes et mobiles */
@@ -347,6 +373,32 @@ label, button, .filter{
     margin-top: 10px;
     align-items: flex-start;
   }
+  /***** SECTION : LODGING *****/
+  #lodging{
+    flex-wrap: wrap;
+    padding: 0;
+    flex-direction: column-reverse;
+  }
+  #lodging > div:nth-of-type(1), #lodging > div:nth-of-type(2){
+    width: 100%;
+    margin: 0;
+    border-radius: 0;
+    max-width: none;
+  }
+  #lodging > div:nth-of-type(1){
+    background-color: white;
+  }
+  #lodging > div:nth-of-type(1) > div, #lodging > div:nth-of-type(2) > div{
+    justify-content: space-evenly;
+    height: auto;
+  }
+  .lodging-contener{
+    width: 550px;
+  }
+  .popular-contener{
+    width: 550px;
+    height: 150px;
+  }
 }
 @media screen and (max-width: 425px) { /* Mobiles */
   /***** SECTION : FILTERS *****/
@@ -355,5 +407,20 @@ label, button, .filter{
   }
   #search-mobile{
     display: inline-block;
+  }
+  #lodging > div:nth-of-type(1), #lodging > div:nth-of-type(2){
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .lodging-contener, .popular-contener{
+    width: 100%;
+    margin-bottom: 5px;
+    margin-top: 5px;
+  }
+  #lodging > div:nth-of-type(1) > div, #lodging > div:nth-of-type(2) > div{
+    overflow: visible;
+  }
+  .popular-contener{
+    height: 145px;
   }
 }
