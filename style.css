@@ -280,6 +280,65 @@ label, button, .filter{
   float: right;
   cursor: pointer;
 }
+/***** SECTION : ACTIVITIES *****/
+#activities{
+  margin-bottom: 40px;
+}
+.activities-contener{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  align-items: center;
+}
+.activity{
+  width: 300px;
+  overflow: hidden;
+  border-radius: 20px;
+  box-shadow: 0px 0px 5px lightgrey;
+}
+.large{
+  height: 445px;
+}
+.small{
+  height: 200px;
+}
+.one{
+  grid-column: 1;
+  grid-row: 1 / 3;
+}
+.two{
+  grid-column: 2;
+  grid-row: 1;
+}
+.three{
+  grid-column: 2;
+  grid-row: 2;
+}
+.four{
+  grid-column: 3;
+  grid-row: 1 / 3;
+}
+.five{
+  grid-column: 4;
+  grid-row: 1;
+}
+.six{
+  grid-column: 4;
+  grid-row: 2;
+}
+.activity img{
+  width: 300px;
+  object-fit: cover;
+  object-position: center;
+}
+.large img{
+  height: 390px;
+}
+.small img{
+  height: 140px;
+}
+.activity h2{
+  padding-left: 20px;
+}
 
 /***** RESPONSIVE *****/
 @media screen and (min-width: 769px) { /* PC seulement */
