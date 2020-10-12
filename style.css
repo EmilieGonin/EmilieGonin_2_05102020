@@ -17,10 +17,10 @@ header, section{
   margin: auto;
   box-sizing: border-box;
 }
-h2{
+h1{
   font-size: 22px;
 }
-h3{
+h2{
   font-size: 17px;
 }
 .blue{
@@ -114,7 +114,7 @@ input, button, .filter{
 label, button, .filter{
   cursor: pointer;
 }
-#filters h3{
+#filters h2{
   display: inline-block;
   margin-right: 20px;
   margin-bottom: 45px;
@@ -260,7 +260,7 @@ label, button, .filter{
   min-width: 160px;
   position: relative;
 }
-.lodging-info h3, .popular-info h3{
+.lodging-info h2, .popular-info h2{
   margin-top: 0;
   margin-bottom: 6px;
 }
@@ -287,7 +287,7 @@ label, button, .filter{
     padding-left: 50px;
     padding-right: 50px;
   }
-  #filters h2 + p{
+  #filters h1 + p{
     margin-top: -15px;
   }
 }
@@ -362,7 +362,7 @@ label, button, .filter{
     margin-top: 30px;
     justify-content: center;
   }
-  #filters h3{
+  #filters h2{
     display: block;
     margin-bottom: 15px;
   }
