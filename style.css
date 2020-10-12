@@ -3,14 +3,15 @@
 /***** GENERAL *****/
 body{
   margin: 0;
+  width: 100%;
 }
 body, input, button{
   font-family: 'Raleway', sans-serif;
 }
 header, section{
-  width: 75%;
-  margin-left: auto;
-  margin-right: auto;
+  width: 100%;
+  max-width: 1440px;
+  margin: auto;
 }
 h2{
   font-size: 22px;
@@ -29,9 +30,9 @@ h3{
 header{
   display: flex;
   height: 120px;
+  justify-content: space-between;
 }
 #logo{
-  width: 100%;
   display: flex;
   align-items: center;
 }
@@ -275,21 +276,23 @@ label, button, .filter{
     margin-top: -15px;
   }
 }
+@media screen and (max-width: 1540px) and (min-width: 769px) { /* Petits PC seulement */
+  header, section {
+    padding-left: 50px;
+    padding-right: 50px;
+    box-sizing: border-box;
+  }
+}
 @media screen and (max-width: 768px) { /* Tablettes et mobiles */
   body{
     position: relative;
   }
-  header, section{
-    width: 100%;
-  }
   header{
-    margin-left: 0;
-    margin-right: 0;
     margin-bottom: 40px;
   }
   section{
-    margin-left: 20px;
-    margin-right: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
   }
   /***** HEADER *****/
   header{
