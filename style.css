@@ -350,6 +350,7 @@ footer{
 footer ul{
   list-style-type: none;
   width: 450px;
+  padding: 0;
 }
 footer li{
   line-height: 35px;
