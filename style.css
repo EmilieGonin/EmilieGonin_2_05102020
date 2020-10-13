@@ -143,6 +143,10 @@ label, button, .filter{
   text-align: center;
   margin: 0;
   margin-right: 10px;
+  transition: transform 500ms ease-in-out;
+}
+.filter:hover p{
+  transform: rotate(360deg) scale(1.1);
 }
 .info{
   display: flex;
