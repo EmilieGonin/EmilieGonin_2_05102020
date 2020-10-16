@@ -489,6 +489,24 @@ footer section{
     height: 150px;
   }
 }
+@media screen and (max-width: 605px) {
+  /***** SECTION : ACTIVITIES *****/
+  .activities-contener{
+    grid-template-areas:
+    "one"
+    "two"
+    "three"
+    "four"
+    "five"
+    "six";
+  }
+  .activity{
+    height: 190px;
+  }
+  .activity img{
+    height: 130px;
+  }
+}
 @media screen and (max-width: 425px) { /* Mobiles */
   /***** SECTION : FILTERS *****/
   #search-pc{
@@ -511,25 +529,6 @@ footer section{
   }
   .popular-contener{
     height: 145px;
-  }
-  /***** SECTION : ACTIVITIES *****/
-  .activities-contener{
-    grid-template-areas:
-    "one"
-    "two"
-    "three"
-    "four"
-    "five"
-    "six";
-  }
-  .activity, .activity img{
-    min-width: 320px;
-  }
-  .activity{
-    height: 190px;
-  }
-  .activity img{
-    height: 130px;
   }
   /***** FOOTER *****/
   footer section{
