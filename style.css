@@ -84,6 +84,9 @@ form label{
   align-items: center;
   justify-content: center;
 }
+form label span{
+  display: none;
+}
 input{
   height: 50px;
   width: 230px;
