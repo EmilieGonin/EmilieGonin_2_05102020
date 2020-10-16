@@ -114,16 +114,19 @@ input, button, .filter{
 label, button, .filter{
   cursor: pointer;
 }
-#filters h2{
+.filters-container{
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+.filters-container h2{
   display: inline-block;
   margin-right: 20px;
-  margin-bottom: 45px;
 }
 .filter{
   height: 50px;
   box-sizing: border-box;
-  margin-left: 10px;
-  margin-right: 10px;
+  margin-right: 20px;
   border-radius: 50px;
   border: 2px #F2F2F2 solid;
   border-left: none;
@@ -131,6 +134,7 @@ label, button, .filter{
   display: inline-flex;
   align-items: center;
   padding-right: 15px;
+  margin-bottom: 10px;
 }
 .filter p{
   background-color: #DEEBFF;
@@ -147,6 +151,9 @@ label, button, .filter{
 }
 .filter:hover p{
   transform: rotate(360deg) scale(1.1);
+}
+.filter span{
+  font-size: 16px;
 }
 .info{
   display: flex;
@@ -451,12 +458,11 @@ footer section{
     margin-top: 30px;
     justify-content: center;
   }
-  #filters h2{
-    display: block;
-    margin-bottom: 15px;
+  .filters-container h2{
+    width: 100%;
   }
   .filter{
-    margin-bottom: 10px;
+    margin-right: 10px;
   }
   .info{
     margin-top: 10px;
