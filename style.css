@@ -366,13 +366,13 @@ footer section{
     justify-content: center;
   }
   .lodging-contener{
-    width: 340px;
+    width: 300px;
   }
   #lodging > div:nth-of-type(1){
-    width: 50%;
+    width: 60%;
   }
   #lodging > div:nth-of-type(2){
-    width: 50%;
+    width: 40%;
   }
   #lodging > div:nth-of-type(1) > div, #lodging > div:nth-of-type(2) > div {
     justify-content: center;
@@ -399,12 +399,26 @@ footer section{
     max-width: 400px;
   }
 }
-
+@media screen and (max-width: 1320px) {
+  /***** SECTION : LODGING *****/
+  .lodging-contener{
+    width: 270px;
+  }
+}
+@media screen and (max-width: 1220px) {
+  /***** SECTION : LODGING *****/
+  .lodging-contener{
+    width: 200px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  /***** SECTION : LODGING *****/
+  .lodging-contener{
+    width: 300px;
+  }
+}
 @media screen and (max-width: 900px) { /* Intermediaire Laptop -> tablettes
   /***** SECTION : ACTIVITIES *****/
-  .activity, .activity img{
-    /*width: 300px;*/
-  }
   footer section{
     flex-wrap: wrap;
   }
